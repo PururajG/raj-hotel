@@ -1,0 +1,478 @@
+/*  Hotel mgmt system used for booking a room to stay or feel relex with faimely or friends */
+
+
+/*------------------------------------------Css for the 990px display screen------------------------------------------*/
+
+@media only screen and (max-width:990px) {
+    /*-------------------- Here the header  css strat --------------------- */
+
+    header .navigation {
+        font-size: 15px;
+    }
+
+    /*-------------------- Here the about  css strat --------------------- */
+
+    .about .coll-2 img {
+        height: 50%;
+        width: 100%;
+    }
+
+    .about .coll-list .coll-1 {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .about .coll-list .coll-1 strong {
+        font-size: 18px;
+
+    }
+
+    /*-------------------- Here the service  css strat --------------------- */
+
+    .services-item {
+        height: 100%;
+    }
+
+    .services-img img {
+        height: 100%;
+    }
+
+    .room-items .room-text {
+        padding: 0rem 2rem;
+        margin-top: 2rem;
+    }
+
+    .room-text .price,
+    .room-text button {
+
+        margin-top: 1.2rem;
+    }
+}
+
+
+/*------------------------------------------Css for the 700px display screen------------------------------------------*/
+
+@media only screen and (max-width:760px) {
+
+    /*-------------------- Here the header  css strat --------------------- */
+
+    header .navigation {
+        justify-content: space-between;
+
+    }
+
+    .navigation .logo img {
+        width: 100px;
+        height: 100%;
+    }
+
+    .cross-arrow {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+
+    .menu-arrow,
+    .cross-arrow {
+        display: block;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .top-arrow {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+
+    }
+
+
+    .navigation .nav-items ul {
+        display: block;
+        padding: 50px;
+        background: #1c1c1c;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        height: 100vh;
+        overflow: hidden;
+        z-index: 99;
+        transition: all 0.5s;
+
+    }
+
+
+    .navigation .nav-items ul li {
+        padding: 12px;
+    }
+
+    .book-btn {
+        display: none;
+        padding: 6px;
+        width: 80px;
+        font-size: 0.5em;
+    }
+
+    .container-text {
+        position: relative;
+        top: 100px;
+        padding: 25px;
+        width: 25rem;
+    }
+
+    .container-text h1 {
+        font-size: 1.2em;
+
+    }
+
+    .container-text p {
+        font-size: 0.6em;
+    }
+
+    .check-abilbility {
+        margin-top: 8em;
+
+    }
+
+    .check-abilbility form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 8px;
+
+    }
+
+    .booking-data {
+        background-color: #f9f9f9;
+        padding: 5px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .check-abilbility button {
+        padding: 5px 10px;
+        font-size: 10;
+    }
+
+    /*-------------------- Here the about  css strat --------------------- */
+
+    .heading {
+        font-size: 1.2em;
+    }
+
+    .coll-list {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        grid-gap: 5px;
+    }
+
+    .about .coll-1 strong {
+        font-size: 16px;
+    }
+
+    .about .coll-1 p {
+        margin-top: 2%;
+        font-size: 12px;
+
+    }
+
+    .about .coll-2 img {
+        height: 250px;
+        width: 100%;
+    }
+
+    .about .coll-1 .read-more-btn {
+        padding: 8px 10px;
+        font-size: 11px;
+
+
+    }
+
+    /*-------------------- Here the services  strat --------------------- */
+    .services-list {
+        display: grid;
+        grid-gap: 20px;
+    }
+
+    .services-item {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .services-text {
+        padding: 1.5rem;
+    }
+
+    .services-text h4 {
+        font-size: 20px;
+
+    }
+
+    .services-text p {
+        font-size: 12px;
+    }
+
+    .services-text button {
+        font-size: 8px;
+        padding: 8px 12px;
+        margin-top: 1.5rem;
+    }
+
+    /*-------------------- Here the rooms  strat --------------------- */
+
+    .Rooms-container .rooms-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .rooms-list .room-items img {
+        height: 300px;
+    }
+
+    .room-items .room-text {
+        padding: 0rem 2rem;
+        margin-top: 2.8rem;
+        font-size: 12px;
+    }
+
+    .room-text h3 {
+        font-size: 20px;
+    }
+
+    .room-text p {
+        margin-top: 1.5rem;
+    }
+
+    .room-text .price {
+        margin-top: 1.5rem;
+        font-size: 15px;
+        font-weight: 900;
+    }
+
+    .room-text button {
+        font-size: 12px;
+        margin-top: 1rem;
+        padding: 8px 15px;
+
+    }
+
+    /*-------------------- Here the gallery  strat --------------------- */
+
+
+
+    .gallery-item img {
+        width: 100%;
+    }
+
+    .gallery-item .btn {
+        background-color: rgba(255, 254, 254, 0.62);
+        /* height: 35px; */
+        border-radius: 50%;
+        font-size: 20px;
+    }
+
+    /*-------------------- Here the blog  strat --------------------- */
+
+    .Blog-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 5px;
+
+    }
+
+
+    .Blog-text {
+        width: 100%;
+        font-size: 14px;
+        padding: 14px;
+
+    }
+
+    .Blog-text .fa {
+        font-size: 18px;
+        margin-top: 2%;
+    }
+
+    .Blog-text button {
+        font-size: 12px;
+        padding: 5px 12px;
+        margin-top: 10px;
+    }
+
+    /*-------------------- Here the contact strat --------------------- */
+    .contact-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+
+    }
+
+    .user-form input {
+        width: 80%;
+        margin-top: 1em;
+    }
+
+    .user-form textarea {
+        margin-top: 3%;
+        width: 80%;
+    }
+
+    /*-------------------- Here the footer strat --------------------- */
+
+
+    .Footer-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 13px;
+        padding: 35px;
+    }
+
+    .Footer-container ul img {
+        height: 40px;
+        width: 100px;
+    }
+
+    .foot-about {
+        width: 80%;
+        font-size: 12px;
+    }
+
+    .Footer-container ul li {
+        padding: 5px;
+    }
+
+    .copywrite {
+        padding-bottom: 5%;
+        font-size: 12px;
+    }
+
+
+}
+
+
+/*------------------------------------------Css for the 460px display screen------------------------------------------*/
+
+@media only screen and (max-width:460px) {
+
+
+    .booking-data {
+        padding: 5px;
+        font-size: 11px;
+    }
+
+    .check-abilbility button {
+        padding: 5px 5px;
+        font-size: 9px;
+    }
+
+    .top-arrow {
+        position: fixed;
+        bottom: 18px;
+        right: 18px;
+
+    }
+
+    .container-text {
+        position: relative;
+        top: 100px;
+        padding: 20px;
+        width: 15rem;
+    }
+
+    .container-text h1 {
+        font-size: 0.6em;
+
+    }
+
+    .container-text p {
+        font-size: 0.05em;
+    }
+
+    /*-------------------- Here the about  css strat --------------------- */
+
+    .heading {
+        font-size: 1em;
+    }
+
+    /*-------------------- Here the footer strat --------------------- */
+
+
+    .Footer-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        font-size: 12px;
+        padding: 35px;
+    }
+
+    .Footer-container ul img {
+        height: 40px;
+        width: 100px;
+    }
+
+    .foot-about {
+        width: 80%;
+        font-size: 10px;
+    }
+
+    .Footer-container ul li {
+        padding: 5px;
+        width: 80%;
+    }
+
+    .copywrite {
+        padding-bottom: 5%;
+        font-size: 8px;
+    }
+
+}
+
+/*------------------------------------------Css for the 300px display screen------------------------------------------*/
+
+@media only screen and (max-width:300px) {
+
+
+    .container-text {
+        position: relative;
+        top: 100px;
+        padding: 20px;
+        width: 12rem;
+    }
+
+    .container-text h1 {
+        font-size: 0.5em;
+
+    }
+
+    .container-text p {
+        font-size: 0.03em;
+    }
+
+    .booking-data input,
+    .booking-data button,
+
+    select {
+        font-size: 8px;
+    }
+
+    .booking-data button {
+        padding: 5px 0px;
+
+    }
+
+    /*-------------------- Here the about  css strat --------------------- */
+
+    .about .coll-1 strong {
+        font-size: 8px;
+    }
+
+    .about .coll-1 p {
+        font-size: 10px;
+
+    }
+
+    .heading {
+        font-size: 0.8em;
+    }
+
+
+}

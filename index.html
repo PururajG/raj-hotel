@@ -1,0 +1,481 @@
+<!-- Hotel mgmt system used for booking a room for stay or feel relex with faimely or friends -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel website">
+    <meta name="keywords" content="Best services, rooms">
+    <title>Raj Hotel</title>
+    <!-- Using Google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap link -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+    <!-- icons llink -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- icons link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <link rel="shortcut icon" href="./Images/Raj-hotel.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Responsive.css">
+    <!-- <script type="text/javascript" src="javas.js"></script> -->
+  
+</head>
+
+<body>
+
+    <!-------------------------------- Here the Header section is strat -------------------------------->
+    
+    <header class="header">
+        <div class="container">
+            <nav id="Home" class="navigation">
+                <div class="logo"><a href="index.html"> <img src="./Images/Raj-hotel.png" alt=""></a> </div>
+                <div class="nav-items">
+                    <ul id="slidmenu" class="nav-list">
+                        <li class="nav-list-item "><a class="active" href="#Home"> Home</a>
+                        </li>
+                        <li class="nav-list-item"><a href="#About"> About</a></li>
+                        <li class="nav-list-item"><a href="#Services"> services</a></li>
+                        <li class="nav-list-item Home-drop"><a href="#Rooms"> Rooms</a>
+                            <!-- <ul class="nav-dropdown">
+                                <li><a href="#">Room 1</a></li>
+                                <li><a href="#">Room 2</a></li>
+                                <li><a href="#">Room 2</a></li>
+                            </ul> -->
+                        </li> 
+                        <li class="nav-list-item"><a href="#Gallery"> Gallery</a></li>
+                        <li class="nav-list-item"><a href="#Blog"> Blog</a></li>
+                        <li class="nav-list-item"><a href="#Contact"> Contact us</a> </li>
+                        <i class="cross-arrow bi bi-x-lg" onclick="hidemenu()"></i>
+                    </ul>
+
+                </div>
+                <div>
+                    <button class="book-btn">Book Now</button>
+                </div>
+                <i class="menu-arrow bi bi-list" onclick="showmenu()"></i>
+
+            </nav>
+            <div class="top-arrow">
+                <i onclick="topbtn()" id="toparrow" class="bi bi-arrow-up"></i>
+            </div>
+            <div class="container-text">
+                <h1>Welcome to The Raj Hotel</h1>
+                <p>If you looking for a perfect holiday experience with memories, You'r at the right place here. Let's
+                    plane a reasonable stay for you We hope you’ll enjoy your stay.</p>
+            </div>
+
+
+            <div class="check-abilbility">
+                <div>
+                    <!-- <h3>Book Your Stay Now</h3> -->
+                    <form action="#">
+                        <div class="booking-data"> <label for="">Arrival Date</label> <br>
+                            <input type="date" placeholder="21/03/2023">
+                        </div>
+                        <div class="booking-data"> <label for="">Departure Date</label> <br>
+                            <input type="date" placeholder="25/03/2023">
+                        </div>
+                        <div class="booking-data"> <label for="">Adults</label> <br>
+                            <select>
+                                <option id="Adults" selected>Adults</option>
+                                <option value="1">1</option>
+                                <option value="1">2</option>
+                                <option value="1">3</option>
+                                <option value="1">4</option>
+                            </select>
+                        </div>
+                        <div class="booking-data"> <label for="">Children</label> <br>
+                            <select>
+                                <option id="Adults" selected>Children</option>
+                                <option value="1">1</option>
+                                <option value="1">2</option>
+                                <option value="1">3</option>
+                                <option value="1">4</option>
+                            </select>
+                        </div>
+                        <div class="booking-data"> <label for="">Rooms</label> <br>
+                            <select>
+                                <option id="Adults" selected>Rooms</option>
+                                <option value="1">1</option>
+                                <option value="1">2</option>
+                                <option value="1">3</option>
+                                <option value="1">4</option>
+                            </select>
+                        </div>
+                        <div class="booking-data"><br>
+                            <button type="submit" name="button">Check Availability</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </header>
+
+    <script>
+        window.onscroll = function () { scrollfunc() };
+        function scrollfunc() {
+            if (document.documentElement.scrollTop > 120 || document.body.scrollTop > 120) {
+                toparrow.style.display = "block";
+                Home.style.backgroundColor = "   rgb(14, 14, 14)"
+            }
+
+            else {
+                toparrow.style.display = "none";
+                Home.style.backgroundColor = "transparent"
+            }
+
+        }
+
+        let toparrow = document.getElementById("toparrow");
+        function topbtn() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+
+        }
+    </script>
+
+    <!-- js for toogle navigation -->
+
+    <script>
+        var slidmenu = document.getElementById('slidmenu');
+
+        function showmenu() {
+            slidmenu.style.right = "0px";
+        }
+        function hidemenu() {
+            slidmenu.style.right = "-300px";
+        }
+
+    </script>
+    <!-------------------------------- Here the about section is strat -------------------------------->
+
+    <div class="about" id="About">
+        <h3 class="heading">We are cool to give you pleasure</h3>
+        <div class="coll-list">
+            <div class="coll-1">
+                <strong>As much as comfort want to get from us everything.</strong>
+                <p> Welcome to the best five-star deluxe hotel. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ab eaque, minima explicabo porro
+                    dolores rem reiciendis quidem vero? Id in repudiandae, laboriosam,
+                    dolores rem reiciendis quidem vero? Id in repudiandae, laboriosam, quaerat perspiciatis repellendus.
+
+                </p>
+                <p>Second error dolor ex vel velit? A possimus nesciunt maiores velit architecto omnis. Voluptas ut
+                    veniam ad
+                    velit pariatur distinctio, delectus repellat! Nisi, similique! quaerat perspiciatis
+                    repellendus.Ab eaque.</p>
+                <a href=""><button class="read-more-btn">Read more</button></a>
+            </div>
+            <div class="coll-2">
+                <img src="./Images/Room head.jpg" alt="" srcset="">
+            </div>
+
+        </div>
+    </div>
+    <!-------------------------------- Here the services section is strat -------------------------------->
+
+    <div class="services-container" id="Services">
+        <h3 class="heading">Our Services</h3>
+        <div class="services-list">
+            <div class="services-item">
+                <div class="services-img"><a href="#"> <img src="./Images/Service.webp" alt="Img not found"></a></div>
+                <div class="services-text">
+                    <h4>Best Food </h4>
+                    <p> Restaurant inilla duiman at elit finibus viverra nec a lacus themo the nesudea seneoice
+                        misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami acsestion
+                        augue artine.</p>
+                    <a href="#"> <button>Learn more</button></a>
+                </div>
+
+            </div>
+            <div class="services-item">
+                <div class="services-text">
+                    <h4>The Restaurant</h4>
+                    <p> Restaurant inilla duiman at elit finibus viverra nec a lacus themo the nesudea seneoice
+                        misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami acsestion
+                        augue artine.</p>
+                    <a href="#"><button>Learn more</button></a>
+                </div>
+                <div class="services-img"><a href="#"> <img src="./Images/Servic (1).jpg" alt="Img not found"></a>
+
+                </div>
+            </div>
+
+            <div class="services-item">
+                <div class="services-img">
+                    <a href="#"> <img src="./Images/Swiming.jpg" alt="Img not found"></a>
+                </div>
+                <div class="services-text">
+                    <h4>The Health Club & Pool</h4>
+                    <p> Restaurant inilla duiman at elit finibus viverra nec a lacus themo the nesudea seneoice
+                        misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami acsestion
+                        augue artine.</p>
+                    <a href="#"> <button>Learn more</button></a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-------------------------------- Here the room section is strat -------------------------------->
+
+    <div class="Rooms-container" id="Rooms">
+        <h3 class="heading">Our Best Rooms</h3>
+        <!-- <p class="heading-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sint.</p> -->
+        <div class="rooms-list">
+            <div class="room-items"><img src="./Images/room1.webp" alt="Images not found" srcset="">
+                <div class="room-text">
+                    <h3> Royal Suit</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae facilis tempora pariatur quo
+                        exercitationem iure!</p>
+                    <p class="price">$220/ Per Night</p>
+                    <a href="Booking.html"><button> Book now</button></a>
+                    <!-- <a href="#"><i class="bi bi-box-arrow-up-right"></i></a> -->
+                </div>
+            </div>
+            <div class="room-items"><img src="./Images/room3.webp" alt="Images not found" srcset="">
+                <div class="room-text">
+                    <h3> Royal Suit</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae facilis tempora pariatur quo
+                        exercitationem iure!</p>
+                    <p class="price">$220 / Per Night</p>
+                    <a href="Booking.html"><button> Book now</button></a>
+                    <!-- <a href="#"><i class="bi bi-box-arrow-up-right"></i></a> -->
+                </div>
+            </div>
+            <div class="room-items"><img src="./Images/room2.webp" alt="Images not found" srcset="">
+                <div class="room-text">
+                    <h3> Royal Suit</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae facilis tempora pariatur quo
+                        exercitationem iure!</p>
+                    <p class="price">$220/ Per Night</p>
+                    <a href="Booking.html"><button> Book now</button></a>
+                    <!-- <a href="#"><i class="bi bi-box-arrow-up-right"></i></a> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-------------------------------- Here the gallery section is strat -------------------------------->
+
+
+    <div class="Gallery-container" id="Gallery">
+        <h3 class="heading">Our Gallery Pictures</h3>
+
+        <div class="Gallery-list">
+
+            <div class="gallery-item">
+
+
+                <div class="gallery-img"> <img src="https://sayajihotels.com/images/innerBanner/sayaji-pune-overview/banner3.jpg" class="Img" alt="work-img"> </div>
+
+                <span onclick="previewimg()" class="prev-btn btn">&lt; </span>
+                <span onclick="nextiewimg()" class="next-btn btn"> &gt;</span>
+            </div>
+            <!-- <div class="gallery-item">
+                <a href="img/slider/5.jpg" title="" class="img-zoom">
+                    <div class="gallery-box">
+                        <div class="gallery-img"> <img src="./images/Gallery (2).webp" class="img-fluid mx-auto d-block"
+                                alt="work-img"> </div>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="img/slider/4.jpg" title="" class="img-zoom">
+                    <div class="gallery-box">
+                        <div class="gallery-img"> <img src="./images/Gallery (3).webp" class="img-fluid mx-auto d-block"
+                                alt="work-img"> </div>
+                    </div>
+                </a>
+            </div>
+            2 columns
+            <div class="gallery-item">
+                <a href="img/slider/2.jpg" title="" class="img-zoom">
+                    <div class="gallery-box">
+                        <div class="gallery-img"> <img src="./images/Gallery (4).webp" class="img-fluid mx-auto d-block"
+                                alt="work-img"> </div>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="img/slider/1.jpg" title="" class="img-zoom">
+                    <div class="gallery-box">
+                        <div class="gallery-img"> <img src="./images/Gallery (5).webp" class="img-fluid mx-auto d-block"
+                                alt="work-img"> </div>
+                    </div>
+                </a>
+            </div>
+            3 columns
+            <div class="gallery-item">
+                <a href="img/rooms/8.jpg" title="" class="img-zoom">
+                    <div class="gallery-box">
+                        <div class="gallery-img"> <img src="./images/Gallery (1).webp" class="img-fluid mx-auto d-block"
+                                alt="work-img"> </div>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="img/rooms/5.jpg" title="" class="img-zoom">
+                    <div class="gallery-box">
+                        <div class="gallery-img"> <img src="./images/Gallery (1).webp" class="img-fluid mx-auto d-block"
+                                alt="work-img"> </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 gallery-item">
+                <a href="img/rooms/10.jpg" title="" class="img-zoom">
+                    <div class="gallery-box">
+                        <div class="gallery-img"> <img src="./Images/Gallery (1).webp" class="img-fluid mx-auto d-block"
+                                alt="work-img"> </div>
+                    </div>
+                </a> 
+            </div>-->
+
+
+            <!-- <div class="gallery-item"><img src="./Images/Gallery (1).webp" alt=""></div>
+            <div class="gallery-item"><img src="./Images/Gallery (2).webp" alt=""></div>
+            <div class="gallery-item"><img src="./Images/Gallery (3).webp" alt=""></div>
+            <div class="gallery-item"><img src="./Images/Gallery (4).webp" alt=""></div>
+            <div class="gallery-item"><img src="./Images/Gallery (5).webp" alt=""></div>
+            <div class="gallery-item"><img src="./Images/Gallery (6).webp" alt=""></div> -->
+        </div>
+
+    </div>
+
+    <!-------------------------------- Here the blog section is strat -------------------------------->
+
+    <div class="Blog-container" id="Blog">
+        <h3 class="heading">Our Blog</h3>
+        <div class="Blog-list">
+            <div><img src="./Images/blog1.webp" alt="Img not found">
+                <div class="Blog-text">
+                    <h3>Review</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae obcaecati minima sapiente
+                        consectetur, ut iste?</p>
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i> <i class="fa fa-star-o"></i> <br>
+                    <button class="read-more-blog"> Read more</button>
+                </div>
+            </div>
+            <div><img src="./Images/blog2.webp" alt="Img not found">
+                <div class="Blog-text">
+                    <h3>Review</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae obcaecati minima sapiente
+                        consectetur, ut iste?</p>
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> <br>
+                    <button class="read-more-blog"> Read more</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-------------------------------- Here the contact section is strat -------------------------------->
+
+    <div class="contact-us" id="Contact">
+        <h3 class="heading">Contact Us </h3>
+        <div class="contact-list">
+            <div class="user-form">
+                <form action="#">
+                    <input type="text" placeholder="Enter your name">
+                    <input type="email" placeholder="Enter your email">
+                    <input type="tel" placeholder="Enter your Phone No.">
+                    <input type="address" placeholder="Enter your address">
+                    <textarea type="textarea" cols="60" rows="3"
+                        placeholder="Enter your Messege">Write your messege here.. </textarea>
+                    <input class="btn" type="submit" value="Sent Messege">
+                </form>
+            </div>
+            <div class="location">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d219.40195052068339!2d79.42235537871485!3d28.37604117756847!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a00721cb6ac073%3A0x5a36b780e8a3fadf!2sNehru%20Park%20Colony%2C%20Saket%2C%20Prem%20Nagar%2C%20Bareilly%2C%20Uttar%20Pradesh%20243003!5e0!3m2!1sen!2sin!4v1647713014786!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------------- Here the footer section is strat -------------------------------->
+
+
+    <footer class="footer">
+        <div class="Footer-container">
+            <div>
+                <ul class="lists">
+
+                    <li>
+                        <p class="foot-heading"> <img src="./Images/Raj-hotel.png" alt=""></p>
+                        <p class="foot-about">Welcome to the best five-star deluxe hotel. Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit. Velit quas
+                            corporis ipsa nulla repellat molestias illo itaque necessitatibus perspiciatis facilis unde,
+                            veritatis, tenetur optio accusamus.</p>
+                </ul>
+                <!-- <li>Our Address
+                    <p>In frony for SDM court Sambhal, Utter Predesh,244302</p>
+                </li> -->
+            </div>
+            <div>
+                <ul class="lists">
+                    <li>
+                        <p class="foot-heading">Hotel Menu</p>
+                    </li>
+                    <li> <a href="#Home "><i class="bi bi-chevron-double-right"></i> Home</a></li>
+                    <li> <a href="#About "><i class="bi bi-chevron-double-right"></i> About</a></li>
+                    <li> <a href="#Services "><i class="bi bi-chevron-double-right"></i> Services</a></li>
+                    <li> <a href="#Gallery "><i class="bi bi-chevron-double-right"></i> Gallery</a></li>
+                    <li> <a href="#Blog "><i class="bi bi-chevron-double-right"></i> Blog</a></li>
+                    <li> <a href="#Rooms "><i class="bi bi-chevron-double-right"></i> Rooms</a></li>
+                    <li> <a href="#Contact "><i class="bi bi-chevron-double-right"></i> Contact us</a></li>
+                </ul>
+                <!-- <li>Reservations
+                    <p>+916395615657</p>
+                </li> -->
+            </div>
+            <div>
+                <ul class="lists">
+                    <li>
+                        <p class="foot-heading">Contact Info </p>
+                    </li>
+                    <li> <a href="#"><i class="bi bi-telephone-fill"></i> Phone <br> +91 6395615657</a>
+                    </li>
+                    <li> <a href="#"><i class="bi bi-envelope"></i> Email Id <br> pururajsbl20@gmail.com</a></li>
+                    <li> <a href="#"><i class="bi bi-geo-alt-fill"></i> Location <br> No. 52 In fron of sdm court
+                            sambhal, Utter Predesh 244302</a></li>
+                    <li> <a href="#"></a></li>
+                </ul>
+                <!-- <li>Whatsapp</li> -->
+            </div>
+            <div>
+                <ul class="lists">
+                    <li>
+                        <p class="foot-heading ">Join With Us</p>
+                    </li>
+                    <li> <a href="#"> <i class="bi bi-instagram"></i> Instagram</a></li>
+                    <li> <a href="#"><i class="bi bi-facebook"></i> facebook </a> </li>
+                    <li>
+                        <a href="#"><i class="bi bi-twitter"></i> twitter </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <p class="copywrite">Copyright &copy; 2023 All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
